@@ -66,15 +66,15 @@ body.blog-sidebar  #header:after{height: 31%;}
 #header{width:100%;height:650px;}
 .blog-no-sidebar  #header .main{width:1170px;margin:auto;}
 .main h4{padding-top: 3em;}
-.header{width:100%;height:150px;padding-top:85px;padding-bottom:114px;}
+.header{width:100%;height:150px;padding-bottom:114px;}
 .travel .header{padding-bottom:40px;}
 .header ul{list-style:none;text-align:center;margin:0;padding:0;}
-.header ul li{display:inline-block;vertical-align:middle;font-weight:800;color:#000;font-size:12px;width:100px;text-transform:uppercase;letter-spacing:3px;margin:0 50px;}
+.header ul li{display:inline-block;vertical-align:middle;font-weight:800;color:#fff;font-size:12px;width:100px;text-transform:uppercase;letter-spacing:3px;margin:0 50px;}
 .travel .header ul li{margin: 0 45px;}
 .header ul li a{color:#000;text-decoration:none;-webkit-transition:all linear .2s;-moz-transition:all linear .2s;-o-transition:all linear .2s;transition:all linear .2s;-ms-transition:all linear .2s;}
 .header .logo{height:150px;width:225px;}
 .logo h3{margin:15px 0 0;}
-
+header h3{ color: #fff !important; margin-top: 3em;}
 .scroll_menu{background-color:#eff0ea;position:fixed;top:0;left:0;z-index:1000;width:100%;height:90px;box-shadow:0 1px 4px 2px rgba(175,175,161,1);display:none;-webkit-transform: translateZ(0);-o-transform: translateZ(0);-ms-transform: translateZ(0);-moz-transform: translateZ(0);transform: translateZ(0);}
 .scroll_menu.header{padding:5px 0 0;}
 .scroll_menu .logo{height:80px;}
@@ -752,7 +752,7 @@ ul.number li,ul.arrow li,ul.star li,ul.heart li{font-size:14px;color:#8b8b8b;lin
 .seagreen{background-color: #53acbb !important;}
 .skyblue{background-color: #74c2ce;}
 .cornsilk{background-color: #fcfcf7;}
-.darkseagreen{background-color: #5ea281;}
+.darkseagreen{background-color: rgba(94, 162, 129, 0.8);}
 .yellowgreen{background-color: #a7d692;}
 .darkcyan{background-color: #3faa96;}
 .khaki{background-color: #f2de83;}
