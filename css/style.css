@@ -71,7 +71,7 @@ body.blog-sidebar  #header:after{height: 31%;}
 .header ul{list-style:none;text-align:center;margin:0;padding:0;}
 .header ul li{display:inline-block;vertical-align:middle;font-weight:800;color:#fff;font-size:12px;width:100px;text-transform:uppercase;letter-spacing:3px;margin:0 50px;}
 .travel .header ul li{margin: 0 45px;}
-.header ul li a{color:#000;text-decoration:none;-webkit-transition:all linear .2s;-moz-transition:all linear .2s;-o-transition:all linear .2s;transition:all linear .2s;-ms-transition:all linear .2s;}
+.header ul li a{color:#fff;text-decoration:none;-webkit-transition:all linear .2s;-moz-transition:all linear .2s;-o-transition:all linear .2s;transition:all linear .2s;-ms-transition:all linear .2s;}
 .header .logo{height:150px;width:225px;}
 .logo h3{margin:15px 0 0;}
 header h3{ color: #fff !important; margin-top: 3em;}
