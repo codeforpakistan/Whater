@@ -17,8 +17,8 @@ Version:	1.3
 5. Team
 6. Skills
 7. Diagram
-8. Section "About" 
-9. Section "Devices" 
+8. Section "About"
+9. Section "Devices"
 10. Section "Framework"
 11. Button
 12. Post
@@ -632,7 +632,7 @@ ul.number li,ul.arrow li,ul.star li,ul.heart li{font-size:14px;color:#8b8b8b;lin
 #scene_1 #items div:nth-child(1) img{ -moz-transform: rotateY(90deg) translateZ(-220px); -ms-transform: rotateY(90deg) translateZ(-220px); -webkit-transform: rotateY(90deg) translateZ(-220px); -o-transform: rotateY(90deg) translateZ(-220px); transform: rotateY(90deg) translateZ(-220px);}
 #scene_1 #items div:nth-child(2) img{ -moz-transform:rotateY(90deg) translateZ(20px); -ms-transform:rotateY(90deg) translateZ(20px); -webkit-transform:rotateY(90deg) translateZ(20px); -o-transform:rotateY(90deg) translateZ(20px); transform:rotateY(90deg) translateZ(20px);}
 #scene_1 #items div:nth-child(4) img{ -moz-transform:rotateY(90deg) translateZ(-60px); -ms-transform:rotateY(90deg) translateZ(-60px); -webkit-transform:rotateY(90deg) translateZ(-60px); -o-transform:rotateY(90deg) translateZ(-60px); transform:rotateY(90deg) translateZ(-60px); }
-#scene_1 #items div:nth-child(3) img,#scene_1 #items div:nth-child(5) img{ -moz-transform:rotateY(90deg) translateZ(-64px); -ms-transform:rotateY(90deg) translateZ(-64px); -webkit-transform:rotateY(90deg) translateZ(-64px); -o-transform:rotateY(90deg) translateZ(-64px); transform:rotateY(90deg) translateZ(-64px); } 
+#scene_1 #items div:nth-child(3) img,#scene_1 #items div:nth-child(5) img{ -moz-transform:rotateY(90deg) translateZ(-64px); -ms-transform:rotateY(90deg) translateZ(-64px); -webkit-transform:rotateY(90deg) translateZ(-64px); -o-transform:rotateY(90deg) translateZ(-64px); transform:rotateY(90deg) translateZ(-64px); }
 
 #scene_1 #eco_items{width:1170px;height: 524px;position:relative;margin:auto;}
 #scene_1 #eco_items div{position:absolute;overflow:hidden;}
@@ -703,15 +703,15 @@ ul.number li,ul.arrow li,ul.star li,ul.heart li{font-size:14px;color:#8b8b8b;lin
 
 .travel #ln_1{top: 32%; left: 66%;width: 250px;}
 .travel #ln_2{top: 34%;left: 26.5%;}
-.travel #ln_3{top: 5%; left: 60.5%;} 
+.travel #ln_3{top: 5%; left: 60.5%;}
 
 .eco #cl_1{top:20%;}
 .eco #cl_2{top:30%;}
 .eco #cl_3{top:10%;}
 .eco #cl_4{top:-8%;}
 
-#airplane{position:absolute;display:block;left:-2000px;width:90px; -webkit-transform: rotate(5deg); -moz-transform: rotate(5deg); -ms-transform: rotate(5deg); -o-transform: rotate(5deg);  transform: rotate(5deg); } 
-.travel #airplane{-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg);  transform: rotate(0deg); } 
+#airplane{position:absolute;display:block;left:-2000px;width:90px; -webkit-transform: rotate(5deg); -moz-transform: rotate(5deg); -ms-transform: rotate(5deg); -o-transform: rotate(5deg);  transform: rotate(5deg); }
+.travel #airplane{-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg);  transform: rotate(0deg); }
 #cl_1{top:45%;background:url(../images/scene/2.png) repeat-y;}
 #cl_2{top:30%;background:url(../images/scene/3.png) repeat-y;}
 #cl_3{top:15%;background:url(../images/scene/4.png) repeat-y;z-index:4;}
@@ -752,7 +752,7 @@ ul.number li,ul.arrow li,ul.star li,ul.heart li{font-size:14px;color:#8b8b8b;lin
 .seagreen{background-color: #53acbb !important;}
 .skyblue{background-color: #74c2ce;}
 .cornsilk{background-color: #fcfcf7;}
-.darkseagreen{background-color: rgba(94, 162, 129, 0.8);}
+.darkseagreen{background-color: rgba(94, 162, 129, 1);}
 .yellowgreen{background-color: #a7d692;}
 .darkcyan{background-color: #3faa96;}
 .khaki{background-color: #f2de83;}
@@ -809,7 +809,7 @@ ul.number li,ul.arrow li,ul.star li,ul.heart li{font-size:14px;color:#8b8b8b;lin
 .panel .columns .item .apply{color: #fff; font-size: 12px;margin: auto;  text-transform: uppercase; display: block;font-weight: 600; background-color: #74c2ce; width: 110px; text-align: center; padding: 10px;-webkit-transition:all linear .2s;-moz-transition:all linear .2s;-o-transition:all linear .2s;transition:all linear .2s;-ms-transition:all linear .2s;}
 .panel .columns .item .apply:hover{background-color: #eff0ea; color: #a5a599;}
 .panel .close{width: 0px; height: 0px; border-top: 75px solid #eff0ea; border-left: 75px solid transparent; position: absolute; top: 0; right: 0; cursor: pointer;}
-.panel .close:after{content: ''; width: 14px; height: 14px; background: url(../images/custom/close.png); position: relative; display: block; top: -58px; right: 29px;-webkit-transition:all linear .2s; -moz-transition:all linear .2s; -o-transition:all linear .2s; -ms-transition:all linear .2s; transition:all linear .2s;} 
+.panel .close:after{content: ''; width: 14px; height: 14px; background: url(../images/custom/close.png); position: relative; display: block; top: -58px; right: 29px;-webkit-transition:all linear .2s; -moz-transition:all linear .2s; -o-transition:all linear .2s; -ms-transition:all linear .2s; transition:all linear .2s;}
 .panel .close:hover:after{transform:scale(1.3);-ms-transform: scale(1.3); -webkit-transform: scale(1.3); -o-transform: scale(1.3); -moz-transform: scale(1.3);}
 .custom_overflow{z-index: 9;position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.3;-webkit-transform: translateZ(0);-o-transform: translateZ(0);-ms-transform: translateZ(0);-moz-transform: translateZ(0);transform: translateZ(0);}
 /**************************** /Custom panel **************************/
