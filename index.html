@@ -11,14 +11,15 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <style>
-    canvas{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -9999;
-        opacity: 0.2;
-    }
-</style>
+        canvas
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -9999;
+            opacity: 0.2;
+        }
+    </style>
 </head>
 <body class="no-blog">
     <!--/Custom panel -->
@@ -67,11 +68,11 @@
                 <h4>What we are trying to do?</h4>
                 <h6>We are a team of volunteers who are trying their best to educate people about what they are drinking </h6>
                 <div id="about">
-                    <a href="#" class="item"><img src="images/1.png" alt=""><span>Collect </span></a>
+                    <a href="#one" id="circleone" onclick="activeTabOne()" class="item"><img src="images/1.png" alt=""><span>Collect </span></a>
                     <div class="arrow"></div>
-                    <a href="#"  class="item"><img src="images/2.png" alt=""><span>Process</span></a>
+                    <a href="#two" id="circletwo" onclick="activeTabTwo()" class="item"><img src="images/2.png" alt=""><span>Process</span></a>
                     <div class="arrow"></div>
-                    <a href="#"  class="item"><img src="images/3.png" alt=""><span>Measure</span></a>
+                    <a href="#three" id="circlethree" onclick="activeTabThree()" class="item"><img src="images/3.png" alt=""><span>Measure</span></a>
                 </div>
                     <!-- <div class="open_more" data-cont="tabs">
                         <div class="icon-down-open"></div>
@@ -82,13 +83,13 @@
             <section id="tabs" class="container beige active" style="display: block;">
                 <div class="tabs_name darkseagreen">
                     <ul>
-                        <li class="active">about project</li>
-                        <li>Achievements</li>
-                        <li>What you are drinking?</li>
+                        <li class="active" id="onetab">about project</li>
+                        <li id="twotab">Achievements</li>
+                        <li id="threetab">What you are drinking?</li>
                     </ul>
                 </div>
                 <div class="tabs main ">
-                    <div class="tab active">
+                    <div class="tab active" id="one">
                         <h2>About Project</h2>
                         <div class="title">This is a project initited by the samaritans of Peshawar to measure the water quality of Peshawar.</div>
                         <div class="slider_container">
@@ -100,7 +101,7 @@
                         </div>
                         <div class="content gray">We created three popular infographic skins for business, ecology and travel. You may use these templates both for these themes and for many others, since they are quite versatile.	</div>
                     </div>
-                    <div class="tab">
+                    <div class="tab" id="two">
                         <h2>About STUDIO</h2>
                         <div class="columns_2">
                             <div class="item">
@@ -135,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab">
+                    <div class="tab" id="three">
                         <h2>Project TEAM</h2>
                         <div class="team vertical">
                             <div class="item">
@@ -578,8 +579,57 @@
         <script type="text/javascript" src="js/responsiveslides.js"></script>
         <script type="text/javascript" src="js/jquery.cookie.js"></script>
         <script type="text/javascript" src="js/front.js"></script>
-    </body>
+        <script>
+            function activeTabOne(){
+                $('#one').addClass('active');
+                $('#two').removeClass('active');
+                $('#three').removeClass('active');
 
+                $('#onetab').addClass('active');
+                $('#twotab').removeClass('active');
+                $('#threetab').removeClass('active');
+                $('#circleone').css('background', '#0a7e3e');
+                $('#circletwo').css('background', 'white');
+                $('#circlethree').css('background', 'white');
+
+            }
+            function activeTabTwo(){
+                $('#one').removeClass('active');
+                $('#two').addClass('active');
+                $('#three').removeClass('active');
+
+                $('#onetab').removeClass('active');
+                $('#twotab').addClass('active');
+                $('#threetab').removeClass('active');
+                
+                $('#circleone').css('background', 'white');
+                $('#circletwo').css('background', '#0a7e3e');
+                $('#circlethree').css('background', 'white');
+            }
+            function activeTabThree(){
+                $('#one').removeClass('active');
+                $('#two').removeClass('active');
+                $('#three').addClass('active');
+                
+                $('#onetab').removeClass('active');
+                $('#twotab').removeClass('active');
+                $('#threetab').addClass('active');
+
+                $('#circleone').css('background', 'white');
+                $('#circletwo').css('background', 'white');
+                $('#circlethree').css('background', '#0a7e3e');
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </body>
     <!-- <script src='https://grgrdvrt.com/miam/bacteria/js/libs/tools/tools.js'></script> -->
     <!-- <script  src="js/index.js"></script> -->
     </html>
