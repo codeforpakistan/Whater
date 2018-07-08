@@ -314,423 +314,544 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: new google.maps.LatLng(34.008915, 71.514113),
-          mapTypeId: 'roadmap',
-          styles: [
-            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-            {
-              featureType: 'administrative.locality',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'geometry',
-              stylers: [{color: '#263c3f'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#6b9a76'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry',
-              stylers: [{color: '#38414e'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#212a37'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#9ca5b3'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry',
-              stylers: [{color: '#746855'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#1f2835'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#f3d19c'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'geometry',
-              stylers: [{color: '#2f3948'}]
-            },
-            {
-              featureType: 'transit.station',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{color: '#17263c'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#515c6d'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.stroke',
-              stylers: [{color: '#17263c'}]
+            zoom: 13,
+            center: new google.maps.LatLng(34.008915, 71.514113),
+            mapTypeId: 'roadmap',
+            styles: [{
+                "featureType": "all",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#ffffff"
+                }]
+            }, {
+                "featureType": "all",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#000000"
+                }, {
+                    "lightness": 13
+                }]
+            }, {
+                "featureType": "administrative",
+                "elementType": "all",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#000000"
+                }]
+            }, {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#144b53"
+                }, {
+                    "lightness": 14
+                }, {
+                    "weight": 1.4
+                }]
+            }, {
+                "featureType": "administrative.country",
+                "elementType": "all",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            }, {
+                "featureType": "administrative.country",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "administrative.land_parcel",
+                "elementType": "all",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            }, {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [{
+                    "color": "#08304b"
+                }, {
+                    "visibility": "on"
+                }]
+            }, {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#0c4152"
+                }, {
+                    "lightness": 5
+                }]
+            }, {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            }, {
+                "featureType": "road",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#000000"
+                }]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#0b434f"
+                }, {
+                    "lightness": 25
+                }]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "road.highway.controlled_access",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#000000"
+                }]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#0b3d51"
+                }, {
+                    "lightness": 16
+                }]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "simplified"
+                }]
+            }, {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#000000"
+                }]
+            }, {
+                "featureType": "road.local",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [{
+                    "color": "#146474"
+                }, {
+                    "visibility": "off"
+                }]
+            }, {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [{
+                    "color": "#021019"
+                }, {
+                    "visibility": "on"
+                }]
             }
-          ]
-        });
+        ]});
 
         var iconBase = 'images/';
         var icons = {
-          info: {
-            icon: iconBase + 'info.png'
+          safa: {
+            icon: iconBase + 'safa.png'
+          },
+          paman: {
+            icon: iconBase + 'paman.png'
           }
         };
+        // var icons = {
+        //   info: {
+        //     icon: iconBase + 'info.png'
+        //   }
+        // };
 
         var features = [
           {
+            type: 'safa',
             position: new google.maps.LatLng(33.974335, 71.432448),
-            type: 'info',
-            title: 'Hayatabad Phase 1'
+            label: 'Hayatabad Phase 1'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.969436, 71.445520),
-            type: 'info',
-            title: 'Hayatabad Phase 2'
+            label: 'Hayatabad Phase 2 - 1'
           }, {
+            type: 'safa',
+            position: new google.maps.LatLng(33.9642431,71.4368945),
+            label: 'Hayatabad Phase 2 - 2'
+          }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.981548, 71.452397),
-            type: 'info',
-            title: 'Hayatabad Phase 3'
+            label: 'Hayatabad Phase 3 - 1'
           }, {
+            type: 'safa',
+            position: new google.maps.LatLng(33.988648,71.45523),
+            label: 'Hayatabad Phase 3 - 2'
+          }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.990372, 71.448868),
-            type: 'info',
-            title: 'Hayatabad Phase 4'
+            label: 'Hayatabad Phase 4'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.989176, 71.439580),
-            type: 'info',
-            title: 'Hayatabad Phase 5'
+            label: 'Hayatabad Phase 5 - 1'
           }, {
+            type: 'safa',
+            position: new google.maps.LatLng(33.985125,71.435248),
+            label: 'Hayatabad Phase 5 - 2'
+          }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.951766, 71.432898),
-            type: 'info',
-            title: 'Hayatabad Phase 6'
+            label: 'Hayatabad Phase 6'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.965902, 71.420136),
-            type: 'info',
-            title: 'Hayatabad Phase 7'
+            label: 'Hayatabad Phase 7'
           }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0286738,71.4254631),
+            label: 'Nasir Bagh - 1'
+          }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0394662,71.4103389),
+            label: 'Nasir Bagh - 2'
+          }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.997841, 71.469522),
-            type: 'info',
-            title: 'Board Bazaar'
+            label: 'Board Bazaar'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.001455, 71.485290),
-            type: 'info',
-            title: 'University'
+            label: 'University'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.993471, 71.494513),
-            type: 'info',
-            title: 'Shaheen Town'
+            label: 'Shaheen Town'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.000752, 71.504170),
-            type: 'info',
-            title: 'Arbab Road'
+            label: 'Arbab Road'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.013049, 71.457868),
-            type: 'info',
-            title: 'Police Colony'
+            label: 'Police Colony'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.024343, 71.454505),
-            type: 'info',
-            title: 'Askari 6'
+            label: 'Askari 6'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.994638, 71.475981),
-            type: 'info',
-            title: 'Danishabad'
+            label: 'Danishabad'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.995773, 71.500876),
-            type: 'info',
-            title: 'Abdara Road'
+            label: 'Abdara Road'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.008608, 71.502631),
-            type: 'info',
-            title: 'Bar Tehkal'
+            label: 'Bar Tehkal'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.009077, 71.513022),
-            type: 'info',
-            title: 'Tambowano '
+            label: 'Tambowano '
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.007034, 71.525168),
-            type: 'info',
-            title: 'Kuz Tehkal'
+            label: 'Kuz Tehkal'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.011245, 71.534029),
-            type: 'info',
-            title: 'Defence '
+            label: 'Defence '
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.000460, 71.542644),
-            type: 'info',
-            title: 'Saddar'
+            label: 'Saddar'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.991562, 71.529664),
-            type: 'info',
-            title: 'Cantt'
+            label: 'Cantt'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.997192, 71.528148),
-            type: 'info',
-            title: 'Askari 5'
+            label: 'Askari 5'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.994202, 71.544535),
-            type: 'info',
-            title: 'Nothia'
+            label: 'Nothia'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.9915237,71.5345329),
-            type: 'info',
-            title: 'Gulberg 1'
+            label: 'Gulberg 1'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.9901738,71.5331391),
-            type: 'info',
-            title: 'Gulberg 2'
+            label: 'Gulberg 2'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.9900811,71.5330455),
-            type: 'info',
-            title: 'Gulberg 3'
+            label: 'Gulberg 3'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0437239,71.5148445),
-            type: 'info',
-            title: 'Warsak Road'
+            label: 'Warsak Road'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0068089,71.5577512),
-            type: 'info',
-            title: 'Shuba Market'
+            label: 'Shuba Market'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0028088,71.558471),
-            type: 'info',
-            title: 'Dabgari'
+            label: 'Dabgari'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0028307,71.5518781),
-            type: 'info',
-            title: 'Khyber Bazaar'
+            label: 'Khyber Bazaar'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.9941353,71.561838),
-            type: 'info',
-            title: 'Ramdas'
+            label: 'Ramdas'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.9983586,71.5644756),
-            type: 'info',
-            title: 'Kakshal'
+            label: 'Kakshal'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.006998,71.5615229),
-            type: 'info',
-            title: 'Asia Gate'
+            label: 'Asia Gate'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0070199,71.5549299),
-            type: 'info',
-            title: 'Sarki Gate'
+            label: 'Sarki Gate'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0103485,71.5831523),
-            type: 'info',
-            title: 'Lahori Gate'
+            label: 'Lahori Gate'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0061108,71.5816261),
-            type: 'info',
-            title: 'Ganj Gate'
+            label: 'Ganj Gate'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.004372,71.5679234),
-            type: 'info',
-            title: 'Kohati Gate'
+            label: 'Kohati Gate'
           }, {
-            position: new google.maps.LatLng(34.0155016,71.6013796),
-            type: 'info',
-            title: 'Gulbahar 1'
+            type: 'safa',
+            position: new google.maps.LatLng(34.0102413,71.5906589),
+            label: 'Bani Gala Gulbahar'
           }, {
-            position: new google.maps.LatLng(34.0142455,71.5894166),
-            type: 'info',
-            title: 'Gulbahar 2'
+            type: 'safa',
+            position: new google.maps.LatLng(34.0155706,71.6034944),
+            label: 'Gulshan Colony Gulbahar'
           }, {
-            position: new google.maps.LatLng(34.0142622,71.5897524),
-            type: 'info',
-            title: 'Gulbahar 3'
+            type: 'safa',
+            position: new google.maps.LatLng(34.0108741,71.6075498),
+            label: 'Inayat Abad Gulbahar'
           }, {
-            position: new google.maps.LatLng(34.0142622,71.5897524),
-            type: 'info',
-            title: 'Gulbahar 4'
+            type: 'safa',
+            position: new google.maps.LatLng(34.0074286,71.5983027),
+            label: 'Rasheed Town Gulbahar'
           }, {
-            position: new google.maps.LatLng(34.0142622,71.5897524),
-            type: 'info',
-            title: 'Gulbahar 5'
+            type: 'safa',
+            position: new google.maps.LatLng(34.0073871,71.5859577),
+            label: 'Sheikh Junaid Abad'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0167975,71.4947319),
-            type: 'info',
-            title: 'Qadarabad'
+            label: 'Qadarabad'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.9819444,71.496676),
-            type: 'info',
-            title: 'Afrido Garhi'
+            label: 'Afrido Garhi'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.9850954,71.5281791),
-            type: 'info',
-            title: 'Swati gate'
+            label: 'Swati gate'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(33.9713843,71.4206921),
-            type: 'info',
-            title: 'Haji Camp'
+            label: 'Haji Camp'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0221145,71.6088569),
-            type: 'info',
-            title: 'Pahari pura'
+            label: 'Pahari pura'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0170724,71.5964355),
-            type: 'info',
-            title: 'Sikandar Town'
+            label: 'Sikandar Town'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0233248,71.6095252),
-            type: 'info',
-            title: 'Sethi Town'
+            label: 'Sethi Town'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0137163,71.5867317),
-            type: 'info',
-            title: 'Nishtarbaad'
+            label: 'Nishtarbaad'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0130626,71.5771558),
-            type: 'info',
-            title: 'Hashtnagri'
+            label: 'Hashtnagri'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0197483,71.5788843),
-            type: 'info',
-            title: 'Faqirabad 1'
+            label: 'Faqirabad 1'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0197702,71.5722913),
-            type: 'info',
-            title: 'Faqirabad 2'
+            label: 'Faqirabad 2'
           }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0309224,71.580568),
+            label: 'Sardar Ahmad Jan Colony'
+          }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0292333,71.594781),
+            label: 'Rafiq Town'
+          }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0237682,71.6025269),
+            label: 'Gisako Colony'
+          }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0215434,71.5761433),
-            type: 'info',
-            title: 'Arbab Niaz Stadium'
+            label: 'Arbab Niaz Stadium'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0215653,71.5695503),
-            type: 'info',
-            title: 'Firdous '
+            label: 'Firdous '
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0030917,71.5642661),
-            type: 'info',
-            title: 'Qissa Khwani'
+            label: 'Qissa Khwani'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0100594,71.5717467),
-            type: 'info',
-            title: 'Chowk Yadgar'
+            label: 'Chowk Yadgar'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0222667,71.5939576),
-            type: 'info',
-            title: 'Ghareebabad'
+            label: 'Ghareebabad'
           }, {
-            position: new google.maps.LatLng(33.9903732,71.5373164),
-            type: 'info',
-            title: 'Gulabad'
-          }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0294868,71.6036458),
-            type: 'info',
-            title: 'Momin town'
+            label: 'Momin town'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0222552,71.5580818),
-            type: 'info',
-            title: 'Shami Road'
+            label: 'Shami Road'
           }, {
-            position: new google.maps.LatLng(33.9600979,71.5577122),
-            type: 'info',
-            title: 'Chargano Chowk'
+            type: 'paman',
+            position: new google.maps.LatLng(34.017413,71.569847),
+            label: 'Chargano Chowk'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.000807,71.5191207),
-            type: 'info',
-            title: 'Falcon Complex'
+            label: 'Falcon Complex'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0641963,71.5885172),
-            type: 'info',
-            title: 'Charsadda Road'
+            label: 'Charsadda Road'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.0270639,71.5794201),
-            type: 'info',
-            title: 'Afghan Colony'
+            label: 'Afghan Colony'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(33.999005, 71.423070),
-            type: 'info',
-            title: 'Karkhano market'
+            label: 'Karkhano market'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.024767, 71.594541),
-            type: 'info',
-            title: 'Dalazak Road'
+            label: 'Dalazak Road'
           }, {
-            position: new google.maps.LatLng(34.035769, 71.613888),
-            type: 'info',
-            title: 'Pakha Ghulam'
-          }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.014413, 71.476545),
-            type: 'info',
-            title: 'Lalazar'
+            label: 'Lalazar'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.021106, 71.492640),
-            type: 'info',
-            title: 'Rahatabad'
+            label: 'Rahatabad'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.005272, 71.473198),
-            type: 'info',
-            title: 'Dhobi Gat'
+            label: 'Dhobi Gat'
           }, {
-            position: new google.maps.LatLng(34.014349, 71.587496),
-            type: 'info',
-            title: 'Sikandar Pura'
-          }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.011103, 71.579395),
-            type: 'info',
-            title: 'Chakka Gali'
+            label: 'Chakka Gali'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.008204, 71.575120),
-            type: 'info',
-            title: 'Mena Bazaar'
+            label: 'Mena Bazaar'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.012478, 71.574006),
-            type: 'info',
-            title: 'Kochi Bazaar'
+            label: 'Kochi Bazaar'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.023380, 71.558473),
-            type: 'info',
-            title: 'WAPDA colony'
+            label: 'WAPDA colony'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.007331, 71.573085),
-            type: 'info',
-            title: 'Pipal Mandi'
+            label: 'Pipal Mandi'
           }, {
+            type: 'paman',
             position: new google.maps.LatLng(34.013449, 71.556813),
-            type: 'info',
-            title: 'Secreteriat '
+            label: 'Secreteriat '
           }, {
-            position: new google.maps.LatLng(34.008400, 71.559493),
-            type: 'info',
-            title: 'MPA Hostel'
-          }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.049459, 71.521211),
-            type: 'info',
-            title: 'Darmangi'
+            label: 'Darmangi'
           }, {
+            type: 'safa',
             position: new google.maps.LatLng(34.0299027,71.5314051),
-            type: 'info',
-            title: 'Khushal bagh'
+            label: 'Khushal bagh'
+          }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0225658,71.4705764),
+            label: 'Professors colony'
+          }, {
+            type: 'safa',
+            position: new google.maps.LatLng(34.0206037,71.4790776),
+            label: 'Agriculture University Peshawar'
           }
         ];
 
@@ -740,7 +861,7 @@
             position: feature.position,
             icon: icons[feature.type].icon,
             map: map,
-            title: feature.title
+            title: feature.label
           });
         });
       }
